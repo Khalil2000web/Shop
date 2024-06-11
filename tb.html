@@ -122,7 +122,33 @@ body.no-scroll {
     height: auto;
     width: 17px;
 }
+
+video::-internal-media-controls {
+      display: none !important;
+    }
+
+    video::-webkit-media-controls {
+      display: none !important;
+    }
+
+    video::-moz-media-controls {
+      display: none !important;
+    }
 </style>
+
+  <script>
+    const video = document.getElementById('vi');
+
+    // Ensure controls attribute is not present
+    video.removeAttribute('controls');
+
+    // Continuously check and remove controls attribute if someone tries to add it
+    setInterval(() => {
+      if (video.hasAttribute('controls')) {
+        video.removeAttribute('controls');
+      }
+    }, 1000);
+  </script>
 
 <div class="image-container">
     <img class="image" src="https://khaliiil.com/Y6.GIF" alt="Animated GIF" oncontextmenu="return false;">
@@ -140,7 +166,7 @@ body.no-scroll {
     <img class="image" src="Bu.GIF" alt="Animated GIF">
 
     <div class="video-container">
-        <video class="image" autoplay muted preload="auto">
+        <video id="vi" class="image" autoplay muted preload="auto">
             <source src="REn2.mov" type="video/mp4">
         </video>
         <img src="mute-icon.png" class="mute-btn" style="display: none;">
