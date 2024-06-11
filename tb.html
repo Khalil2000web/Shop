@@ -122,71 +122,7 @@ body.no-scroll {
     height: auto;
     width: 17px;
 }
-
-video::-internal-media-controls {
-      display: none !important;
-    }
-
-    video::-webkit-media-controls {
-      display: none !important;
-    }
-
-    video::-moz-media-controls {
-      display: none !important;
-    }
 </style>
-
-  <script>
-    const video = document.getElementById('vi');
-
-    // Ensure controls attribute is not present
-    video.removeAttribute('controls');
-
-    // Continuously check and remove controls attribute if someone tries to add it
-    setInterval(() => {
-      if (video.hasAttribute('controls')) {
-        video.removeAttribute('controls');
-      }
-    }, 1000);
-  </script>
-
-<div class="image-container">
-    <img class="image" src="https://khaliiil.com/Y6.GIF" alt="Animated GIF" oncontextmenu="return false;">
-
-    <a href="https://khaliiil.com/BeenMajestic"><img class="image" src="https://khaliiil.com/BRO.GIF" alt="ALWAYS_BEEN_ROYAL"></a>
-
-    <img class="image" src="IMG_7634.jpg">
-    <img class="image" src="IMG_7632.jpg">
-    <img class="image" src="St.GIF" alt="Animated GIF">
-    <img class="image" src="Su.GIF" alt="Animated GIF">
-    <img class="image" src="Cl.GIF" alt="Animated GIF">
-    <img class="image" src="T-1.JPG">
-    <img class="image" src="IMG_7607.jpg">
-    <img class="image" src="IMG_7608.png">
-    <img class="image" src="Bu.GIF" alt="Animated GIF">
-
-    <div class="video-container">
-        <video id="vi" class="image" autoplay muted preload="auto">
-            <source src="REn2.mov" type="video/mp4">
-        </video>
-        <img src="mute-icon.png" class="mute-btn" style="display: none;">
-        <img src="unmute-icon.png" class="unmute-btn">
-    </div>
-
-    <img class="image" src="P.jpeg">
-    <img class="image" src="IMG_7474.jpg">
-</div>
-
-<div id="overlay">
-    <span id="prev-btn" class="nav-btn">
-        <img src="prev.PNG" alt="Previous">
-    </span>
-    <div id="overlay-content"></div>
-    <span id="next-btn" class="nav-btn">
-        <img src="next.PNG" alt="Next">
-    </span>
-    <img id="close-btn" src="Xbtn.PNG" alt="Close">
-</div>
 
 <div class="image-container">
     <img class="image" src="https://khaliiil.com/Y6.GIF" alt="Animated GIF" oncontextmenu="return false;">
@@ -205,7 +141,7 @@ video::-internal-media-controls {
 
     <div class="video-container">
         <video class="image" autoplay muted loop height="390">
-            <source src="https://media.khaliiil.com/copy_B4660E0E-C0A0-47BC-AA79-0EC176811B67.mov" type="video/mp4">
+            <source src="https://www.khaliiil.com/REn2.mov" type="video/mp4">
         </video>
         <img src="mute-icon.png" class="mute-btn" style="display: none;">
         <img src="unmute-icon.png" class="unmute-btn">
