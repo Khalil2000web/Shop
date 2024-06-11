@@ -44,12 +44,12 @@ html, body {
 
 .mute-btn, .unmute-btn {
     position: absolute;
-    right: 15px;
-    bottom: 15px;
+    right: 10px;
+    bottom: 10px;
     cursor: pointer;
     z-index: 10;
-    width: 18px;
-    height: 20px;
+    width: 30px;
+    height: 30px;
 }
 
 #overlay {
@@ -70,14 +70,13 @@ html, body {
 body.no-scroll {
     overflow: hidden;
 }
+
 #overlay-content {
     width: 100%;
     height: 100%;
-    overflow-y: auto;
-    touch-action: pan-y;
     display: flex;
     justify-content: center;
-    align-items: flex-start; /* Align media items to the top */
+    align-items: center;
 }
 
 #overlay-content video {
@@ -126,40 +125,79 @@ body.no-scroll {
 </style>
 
 <div class="image-container">
-    
+    <img class="image" src="https://khaliiil.com/Y6.GIF" alt="Animated GIF" oncontextmenu="return false;">
+
+    <a href="https://khaliiil.com/BeenMajestic"><img class="image" src="https://khaliiil.com/BRO.GIF" alt="ALWAYS_BEEN_ROYAL"></a>
+
+    <img class="image" src="IMG_7634.jpg">
+    <img class="image" src="IMG_7632.jpg">
+    <img class="image" src="St.GIF" alt="Animated GIF">
+    <img class="image" src="Su.GIF" alt="Animated GIF">
+    <img class="image" src="Cl.GIF" alt="Animated GIF">
+    <img class="image" src="T-1.JPG">
+    <img class="image" src="IMG_7607.jpg">
+    <img class="image" src="IMG_7608.png">
+    <img class="image" src="Bu.GIF" alt="Animated GIF">
+
     <div class="video-container">
-        <video class="image" autoplay muted>
-            <source src="https://media.khaliiil.com/copy_B4660E0E-C0A0-47BC-AA79-0EC176811B67.mov" type="video/mp4">
+        <video class="image" autoplay muted preload="auto">
+            <source src="REn2.mov" type="video/mp4">
         </video>
-        <img src="https://www.khaliiil.com/on.png" class="mute-btn" style="display: none;">
-        <img src="https://www.khaliiil.com/off.png" class="unmute-btn">
-    </div>
-    
-    <img class="image" src="https://www.khaliiil.com/Y6.GIF" alt="Animated GIF" oncontextmenu="return false;">
-
-    <a href="https://www.khaliiil.com/BeenMajestic"><img class="image" src="https://www.khaliiil.com/BRO.GIF" alt="ALWAYS_BEEN_ROYAL"></a>
-
-    <div class="video-container">
-        <video class="image" muted>
-            <source src="https://www.khaliiil.com/REn2.mov" type="video/mp4">
-        </video>
-        <img src="https://www.khaliiil.com/on.png" class="mute-btn" style="display: none;">
-        <img src="https://www.khaliiil.com/off.png" class="unmute-btn">
+        <img src="mute-icon.png" class="mute-btn" style="display: none;">
+        <img src="unmute-icon.png" class="unmute-btn">
     </div>
 
-    <img class="image" src="https://www.khaliiil.com/P.jpeg">
-    <img class="image" src="https://www.khaliiil.com/IMG_7474.jpg">
+    <img class="image" src="P.jpeg">
+    <img class="image" src="IMG_7474.jpg">
 </div>
 
 <div id="overlay">
     <span id="prev-btn" class="nav-btn">
-        <img src="https://www.khaliiil.com/prev.PNG" alt="Previous">
+        <img src="prev.PNG" alt="Previous">
     </span>
     <div id="overlay-content"></div>
     <span id="next-btn" class="nav-btn">
-        <img src="https://www.khaliiil.com/next.PNG" alt="Next">
+        <img src="next.PNG" alt="Next">
     </span>
-    <img id="close-btn" src="https://www.khaliiil.com/Xbtn.PNG" alt="Close">
+    <img id="close-btn" src="Xbtn.PNG" alt="Close">
+</div>
+
+<div class="image-container">
+    <img class="image" src="https://khaliiil.com/Y6.GIF" alt="Animated GIF" oncontextmenu="return false;">
+
+    <a href="https://khaliiil.com/BeenMajestic"><img class="image" src="https://khaliiil.com/BRO.GIF" alt="ALWAYS_BEEN_ROYAL"></a>
+
+    <img class="image" src="IMG_7634.jpg">
+    <img class="image" src="IMG_7632.jpg">
+    <img class="image" src="St.GIF" alt="Animated GIF">
+    <img class="image" src="Su.GIF" alt="Animated GIF">
+    <img class="image" src="Cl.GIF" alt="Animated GIF">
+    <img class="image" src="T-1.JPG">
+    <img class="image" src="IMG_7607.jpg">
+    <img class="image" src="IMG_7608.png">
+    <img class="image" src="Bu.GIF" alt="Animated GIF">
+
+    <div class="video-container">
+        <video class="image" autoplay muted loop height="390">
+            <source src="REn2.mov" type="video/mp4">
+        </video>
+        <img src="mute-icon.png" class="mute-btn" style="display: none;">
+        <img src="unmute-icon.png" class="unmute-btn">
+    </div>
+
+    <img class="image" src="P.jpeg">
+    <img class="image" src="IMG_7474.jpg">
+</div>
+
+<div id="overlay">
+    <span id="prev-btn" class="nav-btn">
+        <img src="prev.PNG" alt="Previous">
+    </span>
+    <div id="overlay-content"></div>
+    <span id="next-btn" class="nav-btn">
+        <img src="next.PNG" alt="Next">
+    </span>
+    <img id="close-btn" src="Xbtn.PNG" alt="Close">
 </div>
 
 </head>
@@ -185,71 +223,74 @@ document.addEventListener('DOMContentLoaded', function() {
         document.body.classList.remove('no-scroll');
     }
 
-    function openOverlay(index) {
-        disableScroll();
-        currentIndex = index;
-        const clonedMedia = mediaElements[currentIndex].cloneNode(true);
+function openOverlay(index) {
+    disableScroll();
+    currentIndex = index;
+    const clonedMedia = mediaElements[currentIndex].cloneNode(true);
 
-        if (clonedMedia.tagName === 'VIDEO') {
-            clonedMedia.currentTime = mediaElements[currentIndex].currentTime;
-            clonedMedia.muted = mediaElements[currentIndex].muted;
-            clonedMedia.autoplay = true;
-            clonedMedia.controls = false;
+    if (clonedMedia.tagName === 'VIDEO') {
+        clonedMedia.currentTime = 0; // Reset the video to the beginning
+        clonedMedia.muted = true; // Mute the cloned video initially
+        clonedMedia.controls = false;
 
-            const videoContainer = document.createElement('div');
-            videoContainer.classList.add('video-container');
-            videoContainer.appendChild(clonedMedia);
+        const videoContainer = document.createElement('div');
+        videoContainer.classList.add('video-container');
+        videoContainer.appendChild(clonedMedia);
 
-            const muteBtn = document.createElement('img');
-            muteBtn.src = 'https://khaliiil.com/on.png';
-            muteBtn.classList.add('mute-btn');
-            muteBtn.style.display = clonedMedia.muted ? 'none' : 'block';
+        const muteBtn = document.createElement('img');
+        muteBtn.src = 'mute-icon.png';
+        muteBtn.classList.add('mute-btn');
+        muteBtn.style.display = 'none'; // Initially hide the mute button
 
-            const unmuteBtn = document.createElement('img');
-            unmuteBtn.src = 'https://khaliiil.com/off.png';
-            unmuteBtn.classList.add('unmute-btn');
-            unmuteBtn.style.display = clonedMedia.muted ? 'block' : 'none';
+        const unmuteBtn = document.createElement('img');
+        unmuteBtn.src = 'unmute-icon.png';
+        unmuteBtn.classList.add('unmute-btn');
 
-            videoContainer.appendChild(muteBtn);
-            videoContainer.appendChild(unmuteBtn);
+        videoContainer.appendChild(muteBtn);
+        videoContainer.appendChild(unmuteBtn);
 
-            muteBtn.addEventListener('click', () => {
-                clonedMedia.muted = true;
-                muteBtn.style.display = 'none';
-                unmuteBtn.style.display = 'block';
-            });
+        muteBtn.addEventListener('click', () => {
+            clonedMedia.muted = true;
+            muteBtn.style.display = 'none';
+            unmuteBtn.style.display = 'block';
+        });
 
-            unmuteBtn.addEventListener('click', () => {
-                if (currentlyUnmutedVideo) {
-                    currentlyUnmutedVideo.muted = true;
-                    const previousMuteBtn = currentlyUnmutedVideo.parentElement.querySelector('.mute-btn');
-                    const previousUnmuteBtn = currentlyUnmutedVideo.parentElement.querySelector('.unmute-btn');
-                    previousMuteBtn.style.display = 'none';
-                    previousUnmuteBtn.style.display = 'block';
-                }
-                clonedMedia.muted = false;
-                currentlyUnmutedVideo = clonedMedia;
-                muteBtn.style.display = 'block';
-                unmuteBtn.style.display = 'none';
-            });
+        unmuteBtn.addEventListener('click', () => {
+            clonedMedia.muted = false;
+            currentlyUnmutedVideo = clonedMedia;
+            muteBtn.style.display = 'block';
+            unmuteBtn.style.display = 'none';
+        });
 
-            overlayContent.innerHTML = '';
-            overlayContent.appendChild(videoContainer);
-        } else {
-            overlayContent.innerHTML = '';
-            overlayContent.appendChild(clonedMedia);
-        }
+        overlayContent.innerHTML = '';
+        overlayContent.appendChild(videoContainer);
 
-        overlay.style.display = 'flex';
+        // Start playback and loop the video
+        clonedMedia.play();
+        clonedMedia.loop = true;
+    } else {
+        overlayContent.innerHTML = '';
+        overlayContent.appendChild(clonedMedia);
     }
 
-    function closeOverlay() {
-        overlay.style.display = 'none';
-        enableScroll();
-        if (currentlyUnmutedVideo) {
-            currentlyUnmutedVideo.pause();
-        }
+    overlay.style.display = 'flex';
+}
+
+function closeOverlay() {
+    overlay.style.display = 'none';
+    enableScroll();
+
+    // Mute all videos on the page
+    document.querySelectorAll('video').forEach(video => {
+        video.muted = true;
+    });
+
+    // Reset currently unmuted video
+    if (currentlyUnmutedVideo) {
+        currentlyUnmutedVideo.muted = true;
+        currentlyUnmutedVideo = null;
     }
+}
 
     mediaElements.forEach((media, index) => {
         media.addEventListener('click', () => {
@@ -265,11 +306,13 @@ document.addEventListener('DOMContentLoaded', function() {
             return;
         }
         currentIndex = (currentIndex - 1 + mediaElements.length) % mediaElements.length;
+        closeOverlay(); // Close the current overlay before opening the next one
         openOverlay(currentIndex);
     });
 
     nextBtn.addEventListener('click', () => {
         currentIndex = (currentIndex + 1) % mediaElements.length;
+        closeOverlay(); // Close the current overlay before opening the next one
         openOverlay(currentIndex);
     });
 
@@ -313,5 +356,6 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 </script>
+
 </body>
 </html>
