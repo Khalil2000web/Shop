@@ -1,1 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Khalil Shop</title>
+<meta name="description" content="The Official Website of Khalil">
+<meta property="og:description" content="The Official Website of Khalil">
+<meta property="og:image" content="https://www.khaliiil.com/system/7FA53553-2225-48AC-B68C-89172E7E6340.jpeg">
+<meta property="og:url" content="https://store.khaliiil.com">
+<meta property="og:site_name" content="Khaliil">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="en_US">
+<meta property="og:author" content="Khalil">
+<link rel="icon" type="image/x-icon" href="https://khaliiil.com/system/FF863B55-25CD-41EA-B199-86DC40B5A73F.jpeg">    
+<meta name="URL" content="http://store.khaliiil.com">
+<meta name="twitter:title" content="Khalil">
+<meta name="twitter:description" content="The Official Website of Khalil">
+<meta property="og:title" content="Khalil">
+<meta property="og:description" content="The Official Website of Khalil">
+<meta property="og:site_name" content="Khalil">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://store.khaliiil.com/">
+<meta http-equiv="Content-type" content="text/html; charset=utf-8">
+<meta name="copyright" content="2024">
+<style>
+@font-face {
+font-family: 'BB Manual Mono Pro TX';
+src: url('https://ik.imagekit.io/ybebp19uwa/BBManualMonoProTX-Regular.woff2?updatedAt=1722424863590') format('woff2');
+}
+@font-face {
+font-family: 'BBManualMonoTX';
+src: url('https://ik.imagekit.io/ybebp19uwa/BBManualMonoProTX-SemiBold.woff2?updatedAt=1722452612640') format('woff2');
+}
+body {
+  margin:0;
+  padding:0;
+  background:#000;
+  font-family:'BB Manual Mono Pro TX', Arial;
+  text-transform:uppercase;
+  padding-top:100px;
+}
 
+.nav-top {
+  position: fixed;
+  width: 100%;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.nav-top {
+  top: 0;
+  height: 80px;
+  background: #000;
+  text-transform:uppercase;
+}
+
+.nav-top .menu {
+  display: flex;
+  gap: 45px;
+}
+
+.nav-top .menu a {
+  color: white;
+  text-decoration: none;
+  padding-bottom: 5px;
+  font-weight: 300;
+  font-size:30px;
+}
+
+@media screen and (max-width:400px) {
+.nav-top .menu {
+    gap:40px;
+}
+.nav-top .menu a{
+  font-size:22px;
+}
+    .footert {
+        justify-content: space-between;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+}
+@media screen and (min-width:401px) and (max-width:500px) {
+.nav-top .menu {
+    gap:45px;
+}
+.nav-top .menu a {
+  font-size:22px;
+}
+}
+
+@media screen and (min-width:501px) and (max-width:600px) {
+.nav-top .menu {
+    gap:100px;
+}
+.nav-top .menu a {
+    font-size:22px;
+}
+#prev-btn {
+  left: 120px;
+  right:aut0;
+  border: 4px solid #275c86;
+  top: 25px;
+}
+
+#next-btn {
+  right:auto;
+  border: 4px solid #275c86;
+  right: 120px;
+  top: 25px;
+}
+}
+
+@media screen and (min-width:601px) and (max-width:700px) {
+.nav-top .menu {
+    gap:120px;
+}
+}
+
+@media screen and (min-width:701px) and (max-width:800px) {
+.nav-top .menu {
+    gap:105px;
+}
+.nav-top .menu a {
+    font-size:22.6px;
+}
+}
+
+@media screen and (min-width:801px) and (max-width:990px) {
+.nav-top .menu {
+    gap:110px;
+}
+.nav-top .menu a {
+    font-size:22px;
+}
+}
+@media screen and (min-width:1000px) {
+.nav-top .menu {
+    gap:150px;
+}
+.nav-top .menu a {
+font-size:24px;
+}
+}
+
+        
+.footert {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    background: none;
+    padding: 10px;
+    margin: 0 auto;
+    align-items: center;
+    z-index:1000;
+}
+
+.footert a, .footert p {
+    text-decoration: none;
+    background: none;
+    color: #fff;
+    border: none;
+    padding: 5px 0;
+    margin: 0 auto;
+    border-radius: 5px;
+    cursor: pointer;
+    text-transform: uppercase;
+    font-size: 15px;
+    font-family: 'BB Manual Mono Pro TX', Arial;
+}
+
+.footert p {
+    margin: 0 10px;
+}
+@media (max-width: 799px) {
+    .footert {
+        justify-content: space-between;
+        padding-left: 40px;
+        padding-right: 40px;
+    }
+    .footert button {
+        margin: 0 5px;
+        margin-bottom: 5px;
+    }
+
+    #m {
+        display: flex;
+    }
+    #d {
+        display: none;
+    }
+}
+.fade-top, .fade-bottom {
+            position: fixed; /* Make the fades fixed */
+            left: 0;
+            right: 0;
+            pointer-events: none; /* Allow clicks to pass through */
+            z-index: 900; /* Ensure they are above the content */
+            border: none; /* Ensure no border is applied */
+            outline: none; /* Ensure no outline is applied */
+        }
+
+        .fade-top {
+            top: 0; /* Position the up fade immediately below the black space */
+            left: 0;
+            right: 0;
+            height: 110px; /* Adjust the height of the fade */
+            background: linear-gradient(to bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
+        }
+            .fade-bottom {
+            bottom: 0; /* Position the down fade immediately above the black space */
+            left: 0;
+            right: 0;
+            height: 110px; /* Adjust the height of the fade */
+            background: linear-gradient(to top, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
+        }
+  #mf {
+    color:white;
+  }
+  #ds .nav-top {
+    height:60px;
+  }
+
+.grid-container {
+  padding:10px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.grid-item {
+  text-align: center;
+  font-family:'BB Manual Mono Pro TX', Arial;
+  padding-bottom:40px;
+}
+
+.grid-item img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  display: block;
+  max-height: 400px;
+  pointer-events:auto;
+  -webkit-touch-callout:none;
+  user-drag:none;
+}
+
+.grid-item p {
+  margin: 10px 0 0;
+  font-size: 1rem;
+  color: #fff;
+  letter-spacing:0.9px;
+}
+
+.grid-container a {
+  color:white;
+  text-decoration:none;
+}
+
+@media screen and (min-width: 768px) {
+.grid-container {
+  width:60%;
+  grid-template-columns: repeat(3, 1fr);
+}
+}
+#sold-out-text-alert-pro {
+  font-size:0.8rem;
+  color:#df5640;
+}
+#available-text-alert-pro {
+  font-size:0.8rem;
+  color:#28c635;
+}
+.fix-tit {
+  position:fixed;
+  color:white;
+  top:0;
+  left:0;
+  margin-top:70px;
+  margin-left:30px;
+  font-size:26px;
+}
+</style>
+</head>
+<body>
+<div class="fix-tit">PRODUCTS</div>
+<div class="fade-bottom"></div>
+<div id="ds">
+<div class="nav-top">
+<div class="menu">
+<a href="https://www.khaliiil.com/">
+<p>HOME</p>
+</a>
+<a href="https://music.khaliiil.com/">
+<p>
+MUSIC
+</p>
+</a>
+<a href="https://tour.khaliiil.com/">
+<p>
+TOUR
+</p>
+</a>
+<a href="https://khaliiil.com/blog">
+<p>
+BLOG
+</p>
+</a>
+</div>
+</div>
+</div>
+
+<div class="footert" id="m">
+<a href="https://khaliiil.com/join-club">
+JOIN
+</a>
+<a href="https://khaliiil.com/snap">
+CREDITS
+</a>
+<a>&copy;</a>
+<a href="https://khaliiil.com/terms-conditions">
+TERMS
+</a>
+<a href="https://khaliiil.com/privacy-policy">
+PRIVACY
+</a>
+</div>
+
+<div class="footert" id="d">
+<a href="https://khaliiil.com/join-club">
+JOIN
+</a>
+<a href="https://khaliiil.com/terms-conditions">
+TERMS & CONDITIONS
+</a>
+<a>
+&copy; 2024 KHALIL
+</a>
+<a href="https://khaliiil.com/credits">
+CREDITS
+</a>
+<a href="https://khaliiil.com/privacy-policy">
+PRIVACY POLICY
+</a>
+</div>
+<div class="grid-container">
+<div class="grid-item">
+<a href="/products/iphone-clear-case">
+<img src="https://ik.imagekit.io/ybebp19uwa/Shop/CB535CF5-4E66-4944-AE14-B023BE131040.png" alt="Item 1">
+<p>IPHONE CLEAR CASE</p>
+</a>
+<p id="sold-out-text-alert-pro">SOLD OUT</p>
+</div>
+</div>
+</body>
+</html>
